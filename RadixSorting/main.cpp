@@ -1,18 +1,21 @@
-//
-//  main.cpp
-//  RadixSorting
-//
-//  Created by Justin P Hogue on 4/22/13.
-//
-//
-
 #include <iostream>
+#include <ctime>
+#include "RadixSort.h"
 
-int main(int argc, const char * argv[])
+int main()
 {
-
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    int array[100];
+    
+    for(int i = 0; i < 100; i++)
+        
+        array[i] = rand() % 1000;
+    
+    radixSort(array, 100);
+    
+    for(int i = 0; i < 100; i++)
+        
+        cout << array[i] << endl;
+    
+    system("pause");
     return 0;
 }
-
